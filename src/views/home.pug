@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 곽현의 실시간 소통방
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+    body
+        header 
+            h1 ⏳Real-time Communication
+            h3 🎈실시간 채팅과 스트리밍👏
+        main 
+            div#nameInputDiv 
+                h3  🔽🔽🔽 Real-time Room List 🔽🔽🔽
+                ul 
+                h3 채팅방 Chating 💬
+                form(action="", id="nameForm")
+                    input(type="text", id="rName", placeholder="채팅방 이름", required)
+                    input(type="text", id="uName", placeholder="닉네임 입력", required)
+                    button 생성 및 참여
+
+            div#messageInputDiv
+                h3 
+                ul 
+                form(action="", id="msgForm") 
+                    input(type="text", placeholder="메시지 입력", required)
+                    button 전송
+                    
+            div#rtcRoom
+                h3 캠방 Streaming 🎥
+                form(action="") 
+                    input(type="text", placeholder="캠방 이름" required)
+                    button 생성 및 참여
+
+            div#call
+                h3 
+                div#myStream
+                    video(src="" id="myFace" autoplay playsinline width="100%" height="500") 
+                    button#mute 🔊 OFF
+                    button#camera 🎥 OFF
+                    select#cameraSelect 
+                    video(src="" id="peerVideo" autoplay playsinline width="100%" height="500") 
+
+        script(src="/socket.io/socket.io.js")
+        script(src="/public/js/app.js")
