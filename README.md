@@ -1,2 +1,2 @@
-# websocket-chat-video-call
+# streaming-chat-app
 Using Socket.IO and WebRTC
